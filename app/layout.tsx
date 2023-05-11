@@ -16,12 +16,10 @@ export default function RootLayout({
         head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
       <head />
-      <body className="dark:bg-stone-900">
-        <ThemeProvider enableSystem={true} attribute="class">
+      <body className="bg-white">
           <Navbar />
           {children}
           <Footer />
-        </ThemeProvider>
       </body>
     </html>
   )

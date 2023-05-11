@@ -1,11 +1,12 @@
 "use client" // this is a client component
 import React from "react"
 import { useState } from "react"
-import { Link } from "react-scroll/modules"
+import Link  from "next/link"
 import { usePathname } from "next/navigation"
 import { useTheme } from "next-themes"
 import { RiMoonFill, RiSunLine } from "react-icons/ri"
 import { IoMdMenu, IoMdClose } from "react-icons/io"
+import Image from "next/image"
 
 interface NavItem {
   label: string
@@ -14,16 +15,12 @@ interface NavItem {
 
 const NAV_ITEMS: Array<NavItem> = [
   {
-    label: "Home",
-    page: "home",
+    label: "PROJECTS",
+    page: "/projects",
   },
   {
-    label: "About",
-    page: "about",
-  },
-  {
-    label: "Projects",
-    page: "projects",
+    label: "CONTACT",
+    page: "/contact",
   },
 ]
 
@@ -33,67 +30,45 @@ export default function Navbar() {
   const pathname = usePathname()
   const [navbar, setNavbar] = useState(false)
   return (
-    <header className="w-full mx-auto  px-4 sm:px-20 fixed top-0 z-50 shadow bg-white dark:bg-stone-900 dark:border-b dark:border-stone-600">
-      <div className="justify-between md:items-center md:flex">
-        <div>
-          <div className="flex items-center justify-between py-3 md:py-5 md:block">
-            <Link to="home">
-              <div className="container flex items-center space-x-2">
-                <h2 className="text-2xl font-bold">Hosna Qasmei</h2>
+    <header className="w-full mx-auto px-28 pt-28 bg-white ">
+      <div className="flex items-center">
+        <div className="m-4">
+          <Image
+            src="/profile.jpg"
+            alt=""
+            width={180}
+            height={180}
+            className="rounded-full shadow-2xl"
+          />
+        </div>
+        <div className="leading-[2.7]">
+          <div className="" >
+            <Link href="/">
+              <div className="container">
+                <h2 className="text-[42px] text-black">Ken Jayakusuma</h2>
+                <hr className="bg-[#19A7CE] rounded-full h-3 w-10 -mt-4"/>
               </div>
             </Link>
-            <div className="md:hidden">
-              <button
-                className="p-2 text-gray-700 rounded-md outline-none focus:border-gray-400 focus:border"
-                onClick={() => setNavbar(!navbar)}
-              >
-                {navbar ? <IoMdClose size={30} /> : <IoMdMenu size={30} />}
-              </button>
-            </div>
           </div>
-        </div>
-
-        <div>
-          <div
-            className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0 ${
-              navbar ? "block" : "hidden"
-            }`}
-          >
-            <div className="items-center justify-center space-y-8 md:flex md:space-x-6 md:space-y-0">
-              {NAV_ITEMS.map((item, idx) => {
-                return (
-                  <Link
-                    key={idx}
-                    to={item.page}
-                    className={
-                      "block lg:inline-block text-neutral-900  hover:text-neutral-500 dark:text-neutral-100"
-                    }
-                    activeClass="active"
-                    spy={true}
-                    smooth={true}
-                    offset={-100}
-                    duration={500}
-                    onClick={() => setNavbar(!navbar)}
-                  >
-                    {item.label}
-                  </Link>
-                )
-              })}
-              {currentTheme === "dark" ? (
-                <button
-                  onClick={() => setTheme("light")}
-                  className="bg-slate-100 p-2 rounded-xl"
-                >
-                  <RiSunLine size={25} color="black" />
-                </button>
-              ) : (
-                <button
-                  onClick={() => setTheme("dark")}
-                  className="bg-slate-100 p-2 rounded-xl"
-                >
-                  <RiMoonFill size={25} />
-                </button>
-              )}
+          <div>
+            <div
+              className={`flex-1 justify-self-center pb-3 mt-8 md:block md:pb-0 md:mt-0`}
+            >
+              <div className="flex space-x-4 items-center">
+                {NAV_ITEMS.map((item, idx) => {
+                  return (
+                    <Link
+                      key={idx}
+                      href={item.page}
+                      className={
+                        "block lg:inline-block text-black tracking-[9] cursor-pointer text-[24px] font-semibold"
+                      }
+                    >
+                      {item.label}
+                    </Link>
+                  )
+                })}
+              </div>
             </div>
           </div>
         </div>
