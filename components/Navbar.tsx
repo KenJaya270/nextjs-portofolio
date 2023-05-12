@@ -30,7 +30,7 @@ export default function Navbar() {
   const pathname = usePathname()
   const [navbar, setNavbar] = useState(false)
   return (
-    <header className="w-full mx-auto px-28 pt-28 bg-white ">
+    <header className="w-full mx-auto px-40 pt-7 bg-white mb-7">
       <div className="flex items-center">
         <div className="m-4">
           <Image
@@ -38,7 +38,7 @@ export default function Navbar() {
             alt=""
             width={180}
             height={180}
-            className="rounded-full shadow-2xl"
+            className="rounded-full shadow-2xl object-cover object-top h-[11.25rem]"
           />
         </div>
         <div className="leading-[2.7]">
@@ -46,7 +46,7 @@ export default function Navbar() {
             <Link href="/">
               <div className="container">
                 <h2 className="text-[42px] text-black">Ken Jayakusuma</h2>
-                <hr className="bg-[#19A7CE] rounded-full h-3 w-10 -mt-4"/>
+                <hr className="bg-[#19A7CE] rounded-full h-3 w-14 -mt-7"/>
               </div>
             </Link>
           </div>
@@ -61,7 +61,7 @@ export default function Navbar() {
                       key={idx}
                       href={item.page}
                       className={
-                        "block lg:inline-block text-black tracking-[9] cursor-pointer text-[24px] font-semibold"
+                        "block lg:inline-block text-black hover:text-[#19A7CE] transition tracking-[0.3rem] cursor-pointer text-[24px] font-semibold"
                       }
                     >
                       {item.label}
