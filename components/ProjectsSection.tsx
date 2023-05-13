@@ -34,9 +34,9 @@ const ProjectsSection = () => {
       </div>
 
       <div className="flex flex-col justify-center space-y-12">
-        {projects.map(project => {
+        {projects.map((project, idx) => {
           return(
-            <div>
+            <div key={idx}>
               <div className="flex flex-col">
                 <div className="flex space-x-4">
                   <div className="group shadow-lg">
