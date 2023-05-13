@@ -42,8 +42,8 @@ const ProjectsSection = () => {
               <SlideUp offset="300px 0px 300px 0px">
                 <div className="flex flex-col">
                   <div className="flex space-x-4">
-                    <div className="group">
-                      <Image src={project.image} alt="" width={508} height={171} className="object-cover object-center rounded border-2 border-slate-800 group-hover:scale-105 cursor-pointer transition"/>
+                    <div className="group shadow-lg">
+                      <Image src={project.image} alt="" width={508} height={171} className="object-cover object-center rounded group-hover:scale-105 cursor-pointer transition"/>
                     </div>
                     <div className=''>
                       <h1 className="font-semibold text-[1.4rem] mb-3">{project.name}</h1>
