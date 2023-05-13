@@ -11,9 +11,9 @@ function ContactForm() {
                     <p className='text-2xl'>If you have any question, just fill form below. I will read your message as soon as possible.</p>
                 </div>
                 <div className="rounded py-10 mt-1">
-                    <div id='modalID' className='bg-lime-600 px-4 py-6 flex items-center justify-between'>
+                    <div id='modalID' className='bg-lime-500 px-4 py-6 flex items-center justify-between'>
                         <p className='font-semibold text-lg text-white' data-modal-hide="modalID">Thanks For Messaging Me!</p>
-                        <span className='text-white text-lg'>&times;</span>
+                        <span className='text-white text-xl cursor-pointer'>&times;</span>
                     </div>
                     <form onSubmit={handleSubmit}>
                         <div>

@@ -11,7 +11,7 @@ const projects = [
   },
   {
     name:'BNews',
-    image:'/Bnews.png',
+    image:'/bnews.png',
     github:'https://github.com/KenJaya270/web-berita',
     description:'A Web application that contains article or hot news'
   },
