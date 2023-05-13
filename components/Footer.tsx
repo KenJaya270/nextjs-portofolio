@@ -4,7 +4,8 @@ import {
   AiOutlineTwitter,
   AiOutlineLinkedin,
   AiOutlineYoutube,
-} from "react-icons/ai"
+} from "react-icons/ai"r
+import Link from 'next/link'
 
 const Footer = () => {
   return (
@@ -15,13 +16,13 @@ const Footer = () => {
           © 2023 Ken Jayakusuma<a href="/" className="hover:underline"></a>
         </div>
         <div className="flex flex-row items-center justify-center space-x-2 mb-1">
-          <a href="https://github.com/KenJaya270" rel="noreferrer" target="_blank">
+          <Link href="https://github.com/KenJaya270" rel="noreferrer" target="_blank">
             <AiOutlineGithub
               className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100"
               size={30}
             />
-          </a>
-        <a
+          </Link>
+        <Link
             href="https://www.linkedin.com/in/ken-jayakusuma-05264a263/"
             rel="noreferrer"
             target="_blank"
@@ -30,7 +31,7 @@ const Footer = () => {
               className="hover:-translate-y-1 transition-transform cursor-pointer text-neutral-500 dark:text-neutral-100"
               size={30}
             />
-          </a>
+          </Link>
     </div>
       </div>
     </footer>
