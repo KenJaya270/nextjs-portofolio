@@ -2,8 +2,6 @@ import React from "react"
 import Image from "next/image"
 import Link from "next/link"
 import SlideUp from "./SlideUp"
-import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs"
-
 const projects = [
   {
     name: "School Payment System",
@@ -39,22 +37,20 @@ const ProjectsSection = () => {
         {projects.map(project => {
           return(
             <div>
-              <SlideUp offset="300px 0px 300px 0px">
-                <div className="flex flex-col">
-                  <div className="flex space-x-4">
-                    <div className="group shadow-lg">
-                      <Image src={project.image} alt="" width={508} height={171} className="object-cover object-center rounded group-hover:scale-105 cursor-pointer transition"/>
-                    </div>
-                    <div className=''>
-                      <h1 className="font-semibold text-[1.4rem] mb-3">{project.name}</h1>
-                      <p className='text-[1.1rem] text-black'>{project.description}</p>
-                      <Link className="group" href={project.github}>
-                        <button className="group-hover:bg-transparent group-hover:text-[#19A7CE] group-hover:border-[#19A7CE] group-hover:border-2 transition mt-3 rounded-full px-3 py-2 bg-[#19A7CE] font-semibold text-white" type="button">View on Github</button>
-                      </Link>
-                    </div>
+              <div className="flex flex-col">
+                <div className="flex space-x-4">
+                  <div className="group shadow-lg">
+                    <Image src={project.image} alt="" width={508} height={171} className="object-cover object-center rounded group-hover:scale-105 cursor-pointer transition"/>
+                  </div>
+                  <div className=''>
+                    <h1 className="font-semibold text-[1.4rem] mb-3">{project.name}</h1>
+                    <p className='text-[1.1rem] text-black'>{project.description}</p>
+                    <Link className="group" href={project.github}>
+                      <button className="group-hover:bg-transparent group-hover:text-[#19A7CE] group-hover:border-[#19A7CE] group-hover:border-2 transition mt-3 rounded-full px-3 py-2 bg-[#19A7CE] font-semibold text-white" type="button">View on Github</button>
+                    </Link>
                   </div>
                 </div>
-              </SlideUp>
+              </div>
             </div>
           )
         })}

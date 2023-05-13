@@ -4,7 +4,7 @@ import {
   AiOutlineTwitter,
   AiOutlineLinkedin,
   AiOutlineYoutube,
-} from "react-icons/ai"r
+} from "react-icons/ai"
 import Link from 'next/link'
 
 const Footer = () => {
