@@ -1,7 +1,6 @@
 import React from 'react'
 import Contact from '@/components/contact'
 import Navbar from '@/components/Navbar'
-import "../styles/globals.css"
 import Footer from '@/components/Footer'
 export default function projects() {
     return (

@@ -1,7 +1,6 @@
 import React from 'react'
 import ProjectsSection from '@/components/ProjectsSection'
 import Navbar from '@/components/Navbar'
-import "../styles/globals.css"
 import Footer from '@/components/Footer'
 export default function projects() {
     return (
