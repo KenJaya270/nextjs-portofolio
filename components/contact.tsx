@@ -12,7 +12,7 @@ function ContactForm() {
                 </div>
                 <div className="rounded py-10 mt-1">
                     <div id='modalID' className='bg-lime-600 px-4 py-6 flex items-center justify-between'>
-                        <p className='font-semibold text-lg text-white'>Thanks For Messaging Me!</p>
+                        <p className='font-semibold text-lg text-white' data-modal-hide="modalID">Thanks For Messaging Me!</p>
                         <span className='text-white text-lg'>&times;</span>
                     </div>
                     <form onSubmit={handleSubmit}>
