@@ -7,11 +7,11 @@ function ContactForm() {
         return(
             <div>
                 <div className="mb-3">
-                    <h2 className='text-black font-bold text-3xl tracking-[0.3rem] my-3'>Contact Me</h2>
-                    <p className='text-2xl'>If you have any question, just fill form below. I will read your message as soon as possible.</p>
+                    <h2 className='text-black font-bold md:text-3xl md:tracking-[0.3rem] sm:text-2xl sm:tracking-[0.1rem] my-3'>Contact Me</h2>
+                    <p className='md:text-2xl sm:text-xl'>If you have any question, just fill form below. I will read your message as soon as possible.</p>
                 </div>
                 <div className="rounded py-10 mt-1">
-                    <div id='modalID' className='bg-lime-500 px-4 py-6 flex items-center justify-between'>
+                    <div id='modalID' className='bg-lime-500 rounded-lg px-4 py-6 flex items-center justify-between'>
                         <p className='font-semibold text-lg text-white' data-modal-hide="modalID">Thanks For Messaging Me!</p>
                         <span className='text-white text-xl cursor-pointer'>&times;</span>
                     </div>
@@ -39,8 +39,8 @@ function ContactForm() {
     return (
         <div>
             <div className="mb-3">
-                <h2 className='text-black font-bold text-3xl tracking-[0.3rem] my-3'>Contact Me</h2>
-                <p className='text-2xl'>If you have any question, just fill form below. I will read your message as soon as possible.</p>
+                <h2 className='text-black font-bold md:text-3xl md:tracking-[0.3rem] sm:text-2xl sm:tracking-[0.1rem] my-3'>Contact Me</h2>
+                <p className='md:text-2xl sm:text-xl'>If you have any question, just fill form below. I will read your message as soon as possible.</p>
             </div>
             <div className="rounded py-10 mt-1">
                 <form onSubmit={handleSubmit}>
