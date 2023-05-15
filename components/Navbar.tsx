@@ -31,7 +31,7 @@ export default function Navbar() {
   const [navbar, setNavbar] = useState(false)
   return (
     <header className="w-full mx-auto max-w-5xl pt-7 bg-white mb-7 ">
-      <div className="flex items-center md:space-x-3 sm:space-x-3 sm:pl-4">
+      <div className="flex items-center md:space-x-3 sm:space-x-3 sm:pl-4 ssm:space-x-3">
         <div className="lg:m-4">
           {/* xxl:px-28 xl:px-40 lg:px-12 md:px-7 sm:px-6*/}
           <Image
@@ -39,15 +39,15 @@ export default function Navbar() {
             alt=""
             width={180}
             height={180}
-            className="rounded-full shadow-2xl object-cover object-top md:h-[9.25rem] md:w-[9.25rem] lg:w-[11.25rem] lg:h-[11.25rem] sm:w-[5rem] sm:h-[5rem]"
+            className="rounded-full shadow-2xl object-cover object-top md:h-[9.25rem] md:w-[9.25rem] lg:w-[11.25rem] lg:h-[11.25rem] sm:w-[5rem] sm:h-[5rem] ssm:w-[5rem] ssm:h-[5rem]"
           />
         </div>
-        <div className="leading-[2.7] md:leading-[2.7] sm:leading-[0.5]">
+        <div className="leading-[2.7] md:leading-[2.7] sm:leading-[0.5] ssm:leading-[0.5]">
           <div className="" >
             <Link href="/">
               <div className="container">
-                <h2 className="text-[42px] text-black md:text-[2.5rem] sm:text-[1.5rem]">Ken Jayakusuma</h2>
-                <hr className="bg-[#19A7CE] rounded-full h-2 w-14 -mt-7 md:-mt-7 sm:mt-2"/>
+                <h2 className="text-[42px] text-black md:text-[2.5rem] sm:text-[1.5rem] ssm:text-[1.5rem]">Ken Jayakusuma</h2>
+                <hr className="bg-[#19A7CE] rounded-full h-2 w-14 -mt-7 md:-mt-7 sm:mt-2 ssm:mt-2"/>
               </div>
             </Link>
           </div>

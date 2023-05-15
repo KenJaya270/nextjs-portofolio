@@ -8,7 +8,7 @@ const HeroSection = () => {
   return (
     <section id="home">
       <div className="bg-[#DBF7FF] px-10 py-9 rounded-[20px]">
-        <h1 className="md:text-[42px] sm:text-[32px]">
+        <h1 className="md:text-[42px] sm:text-[32px] ssm:text-[27px]">
           <Typewriter onInit={(typewriter) =>{
             typewriter.typeString(`👋 Hi I'm Ken Jaya`)
             .pauseFor(1000)
